@@ -10,6 +10,7 @@ from completor.compat import text_type
 from .filename import Filename  # noqa
 from .buffer import Buffer  # noqa
 from .omni import Omni  # noqa
+from .tags import Tags  # noqa
 
 try:
     from UltiSnips import UltiSnips_Manager  # noqa
@@ -25,7 +26,7 @@ class Common(completor.Completor):
     filetype = 'common'
     sync = True
 
-    hooks = ['ultisnips', 'buffer']
+    hooks = ['ultisnips', 'buffer', 'tags']
 
     @classmethod
     def is_common(cls, comp):
